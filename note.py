@@ -2,13 +2,12 @@ from datetime import date
 
 class Note:
 
-    id = 0
 
     def __init__(self, title, text):
         self.title = title
         self.text = text
         self.create_date = date.today()
-        self.id += 1
+        self.id = id(self)
 
     def get_id(self):
         return self.id
